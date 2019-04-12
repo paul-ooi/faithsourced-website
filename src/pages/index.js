@@ -13,7 +13,8 @@ class IndexPage extends React.Component {
       timeout: false,
       articleTimeout: false,
       article: '',
-      loading: 'is-loading'
+      loading: 'is-loading',
+      scrolly: 0
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
@@ -47,7 +48,8 @@ class IndexPage extends React.Component {
 
     setTimeout(() => {
       this.setState({
-        timeout: !this.state.timeout
+        timeout: !this.state.timeout,
+        scrolly: window.pageYOffset
       })
       window.scrollTo(0, 0)
     }, 325)
@@ -70,12 +72,14 @@ class IndexPage extends React.Component {
       this.setState({
         timeout: !this.state.timeout
       })
+       window.scrollTo(0, this.state.scrolly)
     }, 325)
 
     setTimeout(() => {
       this.setState({
         isArticleVisible: !this.state.isArticleVisible,
-        article: ''
+        article: '',
+        scrolly: 0
       })
     }, 350)
 
