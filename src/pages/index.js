@@ -26,6 +26,7 @@ class IndexPage extends React.Component {
         this.setState({loading: ''});
     }, 100);
     document.addEventListener('mousedown', this.handleClickOutside);
+    window.scrollTo(0, 0)
   }
 
   componentWillUnmount () {
@@ -39,9 +40,7 @@ class IndexPage extends React.Component {
     this.wrapperRef = node;
   }
 
-  handleOpenArticle(article) {
-	window.scrollTo(0, 0)
-	
+  handleOpenArticle(article) {	
     this.setState({
       isArticleVisible: !this.state.isArticleVisible,
       article
