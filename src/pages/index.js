@@ -26,7 +26,6 @@ class IndexPage extends React.Component {
         this.setState({loading: ''});
     }, 100);
     document.addEventListener('mousedown', this.handleClickOutside);
-    window.scrollTo(0, 0)
   }
 
   componentWillUnmount () {
@@ -50,6 +49,7 @@ class IndexPage extends React.Component {
       this.setState({
         timeout: !this.state.timeout
       })
+      window.scrollTo(0, 0)
     }, 325)
 
     setTimeout(() => {
