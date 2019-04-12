@@ -40,7 +40,8 @@ class IndexPage extends React.Component {
   }
 
   handleOpenArticle(article) {
-
+	window.scrollTo(0, 0)
+	
     this.setState({
       isArticleVisible: !this.state.isArticleVisible,
       article
