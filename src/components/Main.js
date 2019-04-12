@@ -52,8 +52,8 @@ class Main extends React.Component {
               <textarea name="message" id="message" rows="4"></textarea>
             </div>
             <ul className="actions">
+              <li><input type="reset" value="Cancel" onClick={() => {this.props.onCloseArticle()}} /></li>
               <li><input type="submit" value="Send Message" className="special" /></li>
-              <li><input type="reset" value="Reset" /></li>
             </ul>
           </form>
           <ul className="icons">
