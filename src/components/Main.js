@@ -16,12 +16,16 @@ class Main extends React.Component {
         <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<h2 className="major">About Us</h2>
 			<span className="image main"><img src={pic01} alt="" /></span>
-          	<p>The FaithSourced Project is for technology professionals who desire to use their expertise for Christ. All too often these skills go unused in churches, and tech professionals are left feeling like their skillset is outside the sphere of kingdom usefulness. For those who are able to use their skills, they tend to be in isolation with very little Christian community in this sphere of ministry.</p>
-			<p>The FaithSourced Project aims to bring technology professionals together with a twofold purpose :</p>
-			<ol>
-				<li><b>Glorify God </b>together by Faith</li>
-				<li><b>Grow</b> together in Faith</li>
-			</ol>
+          	<p>Faith Sourced is a community of software developers using their skills for Jesus. We call it &ldquo;Software as a Service&rdquo; where Christ is the center of all we are and do.</p>
+
+			<p>But the project isn&rsquo;t just for developers. Professionals from across the digital spectrum are essential to this project, including those in strategy, project management, design, development, infrastructure, support and communications. The Faith Sourced project is a platform for coordinating this collective expertise.</p>
+
+			<p>Each participant in the Faith Sourced project has seen what we can do as individuals, with all its limitations. We&rsquo;ve witnessed the duplication of effort at church after church, when we each try to accomplish the same goal, from our independent silos. The Faith Sourced project brings us together, with a common purpose, and a strength in numbers.</p>
+
+			<p>Faith Sourced is our contribution to the cause of Christ, and His church. Faith Sourced is our chance to use our uniquely technical skills for purposes that are eternal, united under one banner: the gospel of Jesus Christ. The software we build is freely available to the body of Christ, for His glory.</p>
+
+			<p>As a community, we gather to grow our faith and invest in each other professionally and spiritually. These meetups are designed to produce well roundedness, and are aptly named &ldquo;Full Stack Faith meetups&rdquo;.</p>
+
           {close}
         </article>
 
