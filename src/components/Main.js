@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import pic01 from '../images/pic01.jpg'
+import logo_explained from '../images/faithsourced-logo-explained.png'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 
@@ -15,9 +15,8 @@ class Main extends React.Component {
 
         <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<h2 className="major">About Us</h2>
-			<span className="image main"><img src={pic01} alt="" /></span>
           	<p>Faith Sourced is a community of software developers using their skills for Jesus. We call it &ldquo;Software as a Service&rdquo; where Christ is the center of all we are and do.</p>
-
+			<span className="image main"><img src={logo_explained} alt="Faith Sourced logo explained" /></span>
 			<p>But the project isn&rsquo;t just for developers. Professionals from across the digital spectrum are essential to this project, including those in strategy, project management, design, development, infrastructure, support and communications. The Faith Sourced project is a platform for coordinating this collective expertise.</p>
 
 			<p>Each participant in the Faith Sourced project has seen what we can do as individuals, with all its limitations. We&rsquo;ve witnessed the duplication of effort at church after church, when we each try to accomplish the same goal, from our independent silos. The Faith Sourced project brings us together, with a common purpose, and a strength in numbers.</p>
@@ -32,7 +31,7 @@ class Main extends React.Component {
         <article id="faith" className={`${this.props.article === 'faith' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">The Qualities of Our Faith</h2>
           <span className="image main"><img src={pic02} alt="" /></span>
-          <p>The Faith that fuels our pursuit for His Glory has the following qualities :</p>
+          <p>The faith that fuels our pursuit for software that has Christ at the center has the following qualities :</p>
           <ol>
 			<li><b>Gospel Faith</b> - an unshakable conviction that Christ is the centre of all we are and all we do. His death on the cross is where we exchange our sins for his perfection. His resurrection from the grave certifies his perfection and validates that our sins have been paid for in their entirety. He is glorified as we build software to share this good news with the world.</li>
 			<li><b>Dependent Faith</b> - a resolve to wholeheartedly depend on God for anything of lasting value to flow from this project, as He is the source, object and hope of our Faith.</li>
