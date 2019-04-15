@@ -12,7 +12,7 @@
 		display: inline-block;
 		position: relative;
 
-		&:before {
+		&.banner:before {
 			@include vendor('pointer-events', 'none');
 			background-image: url('../../images/overlay.png');
 			background-color: _palette(bg-overlay);
