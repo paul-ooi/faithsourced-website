@@ -30,8 +30,7 @@ class Main extends React.Component {
 
         <article id="faith" className={`${this.props.article === 'faith' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">The Qualities of Our Faith</h2>
-          <span className="banner image main"><img src={pic02} alt="" /></span>
-          <p>Our faith that fuels the Faith Sourced project has the following qualities :</p>
+          <p>The faith that fuels our contributions to the Faith Sourced project has the following qualities :</p>
           <ol>
 			<li><b>Gospel Faith</b> - an unshakable conviction that Christ is the centre of all we are and all we do. His death on the cross is where we exchange our sins for his perfection. His resurrection from the grave certifies his perfection and validates that our sins have been paid for in their entirety. He is glorified as we build software to share this good news with the world.</li>
 			<li><b>Dependent Faith</b> - a resolve to wholeheartedly depend on God for anything of lasting value to flow from this project, as He is the source, object and hope of our Faith.</li>
