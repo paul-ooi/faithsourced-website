@@ -33,11 +33,11 @@
 		white-space: nowrap;
 
 		&:hover {
-			background-color: _palette(accent);
+			background-color: _palette(border-bg-accent);
 		}
 
 		&:active {
-			background-color: _palette(border-bg-alt);
+			background-color: _palette(border-bg-accent-alt);
 		}
 
 		&.icon {
