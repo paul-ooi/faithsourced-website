@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Faith Sourced Software Foundation",
     author: "",
-    description: ""
+    description: "Sofware as a Service"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'gatsby-starter-default',
-        short_name: 'starter',
+        short_name: 'Faith Sourced',
         start_url: '/',
         background_color: '#2c393f',
         theme_color: '#2c393f',
