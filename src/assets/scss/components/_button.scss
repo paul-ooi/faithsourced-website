@@ -58,6 +58,7 @@
 			font-weight: _font(weight-bold);
 
 			&:hover {
+				background-color: _palette(accent-alt);
 			}
 
 			&:active {

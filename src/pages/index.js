@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 
 import Header from '../components/Header'
 import Main from '../components/Main'
+import Home from '../components/Home'
 import Footer from '../components/Footer'
 
 class IndexPage extends React.Component {
@@ -24,7 +25,7 @@ class IndexPage extends React.Component {
 
   componentDidMount () {
     this.timeoutId = setTimeout(() => {
-        this.setState({loading: ''});
+        this.setState({loading: 'loaded'});
     }, 100);
     document.addEventListener('mousedown', this.handleClickOutside);
   }
@@ -43,7 +44,7 @@ class IndexPage extends React.Component {
   handleOpenArticle(article) {	
     this.setState({
       isArticleVisible: !this.state.isArticleVisible,
-      article
+      article, loading: ''
     })
 
     setTimeout(() => {
@@ -106,6 +107,7 @@ class IndexPage extends React.Component {
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
             />
+            <Home onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
             <Footer timeout={this.state.timeout} />
           </div>
           <div id="bg"></div>
