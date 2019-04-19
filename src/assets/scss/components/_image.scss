@@ -11,12 +11,23 @@
 		border: 0;
 		display: inline-block;
 		position: relative;
-
+		
+		&.banner {
+			margin: -4.5rem -2.5rem 2.5rem -2.5rem;
+			width: calc(100% + 5rem);
+			border-radius: _size(border-radius-top);
+		
+			img {
+				width: 100%;
+				border-radius: _size(border-radius-top);
+			}
+		}
+		
 		&.banner:before {
 			@include vendor('pointer-events', 'none');
 			background-image: url('../../images/overlay.png');
 			background-color: _palette(bg-overlay);
-			border-radius: _size(border-radius);
+			border-radius: _size(border-radius-top);
 			content: '';
 			display: block;
 			height: 100%;
@@ -72,14 +83,26 @@
 				width: 100%;
 			}
 		}
+		
+		@include breakpoint(xlarge) {
+			&.banner {
+				margin: -4.5rem -2.5rem 2.5rem -2.5rem;
+				width: calc(100% + 5rem);
+			}
+		}
 
-		@include breakpoint(small) {
+		@include breakpoint(small) {			
 			&.main {
 				margin: (_size(element-margin) * 1) 0;
 			}
 		}
 
 		@include breakpoint(xsmall) {
+			&.banner {
+				margin: -3rem -1.5rem 1.5rem -1.5rem;
+				width: calc(100% + 3rem);
+			}
+			
 			&.main {
 				margin: (_size(element-margin) * 0.75) 0;
 			}

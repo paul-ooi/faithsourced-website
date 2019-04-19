@@ -15,6 +15,7 @@
 // Size.
 	$size: (
 		border-radius:				4px,
+		border-radius-top:			4px 4px 0px 0px,
 		border-width:				1px,
 		element-height:				2.75rem,
 		element-margin:				2rem
@@ -24,6 +25,7 @@
 	$font: (
 		family:						('Source Sans Pro', sans-serif),
 		family-fixed:				('Courier New', monospace),
+		family-custom:				('Faith Sourced Font', sans-serif),
 		weight:						300,
 		weight-bold:				600,
 		letter-spacing:				0.2rem,

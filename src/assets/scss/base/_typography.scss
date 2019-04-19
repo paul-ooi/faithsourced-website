@@ -6,6 +6,22 @@
 
 /* Type */
 
+	@font-face {
+		font-family: 'Faith Sourced Font';
+		src: url('../fonts/FaithSourcedFont.eot');
+		src: url('../fonts/FaithSourcedFont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FaithSourcedFont.woff2') format('woff2'),
+		url('../fonts/FaithSourcedFont.woff') format('woff'),
+		url('../fonts/FaithSourcedFont.svg#FaithSourcedFont') format('svg');
+	}
+	
+	.font-custom {
+		font-family: _font(family-custom);
+		font-weight: normal;
+		font-style: normal;
+		font-size: .835em;
+	}
+	
 	html {
 		font-size: 16pt;
 
@@ -176,4 +192,12 @@
 
 	.align-right {
 		text-align: right;
+	}
+	
+	.float-left {
+		float: left;
+	}
+
+	.float-right {
+		float: right;
 	}
