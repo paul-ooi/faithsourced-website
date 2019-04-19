@@ -71,7 +71,7 @@ class Main extends React.Component {
 				<li>technology discussions</li>
 				<li>Faith Sourced project planning</li>
 				<li>personal testimonies</li>
-				<li>study of God's Word</li>
+				<li>the study of God's Word</li>
 				<li>a stack or two of pancakes!</li>
 			</ol>
 			<p>The Faith Sourced project is an initiative so ambitious we could worry there are not enough pancakes in the world. Thankfully our <span className="font-custom">faith</span> is not in pancakes.</p>
