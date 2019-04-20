@@ -27,7 +27,8 @@ class Main extends React.Component {
         <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<h2 className="major">About Us</h2>
 				<p>Faith Sourced is a community of software developers using our skills for Jesus. We call it &ldquo;Software as a Service&rdquo; where Christ is the center of all we are and do.</p>
-			<span className="image main"><img src={logo_explained} alt="Faith Sourced logo explained" /></span>
+				<span className="image main"><img src={logo_explained} alt="Faith Sourced logo explained" /></span>
+				<p>Our collective <span className="font-custom">faith</span> in Christ compells both our crowd-sourced and open-sourced contributions, hence the name Faith Sourced. This is software by the church, for the church.</p>
 			<p>But this isn&rsquo;t just for developers. Professionals from across the digital spectrum are essential to our community driven projects, including those in strategy, project management, design, development, infrastructure, support and communications. As such, the Faith Sourced project is also a platform for coordinating this collective expertise.</p>
 
 			<p>Each participant in the Faith Sourced project has seen what we can do as individuals, with all its limitations. We&rsquo;ve witnessed the duplication of effort at church after church, when we each try to accomplish the same goal, from our independent silos. The Faith Sourced project brings us together, with a common purpose, and a strength in numbers.</p>
@@ -41,7 +42,7 @@ class Main extends React.Component {
 
         <article id="faith" className={`${this.props.article === 'faith' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<h2 className="major">The Qualities of Our Faith</h2>
-			<p>The faith that fuels our contributions to the Faith Sourced project has the following qualities :</p>
+			<p>The <span className="font-custom">faith</span> that fuels our contributions to Faith Sourced projects has the following qualities :</p>
 			<ol>
 			<li><b>Gospel <span className="font-custom">Faith</span></b> - an unshakable conviction that Christ is the centre of all we are and all we do. His death on the cross is where we exchange our sins for his perfection. His resurrection from the grave certifies his perfection and validates that our sins have been paid for in their entirety. He is glorified as we build software to share this good news with the world.</li>
 			<li><b>Dependent <span className="font-custom">Faith</span></b> - a resolve to wholeheartedly depend on God for anything of lasting value to flow from this project, as He is the source, object and hope of our Faith.</li>
@@ -52,7 +53,7 @@ class Main extends React.Component {
 			<li><b>Collaborative <span className="font-custom">Faith</span></b> - the pursuit of a distributed effort that depends on manageable contributions from the many instead of unsustainable contributions from the few.</li>
 			<li><b>Generous <span className="font-custom">Faith</span></b> - a heart to share the fruits of our labour so that as many churches as possible can benefit. This includes shared expertise, shared best practices, shared code, shard bug fixes, shared support resources. There is no room for the &ldquo;keep this to ourselves&rdquo; practice that occurs when churches are independent silos on these matters.</li>
 			<li><b>Efficient <span className="font-custom">Faith</span></b> - the recognition that projects/tasks must be strategically well defined and clear in order to be conducive to individual contribution and large scale collaboration.</li>
-			<li><b>Gracious <span className="font-custom">Faith</span></b>&nbsp; - Our collective aknowledgement that&nbsp;we are all at different levels of our expertise and Fait, so there is&nbsp;no room for pride or arrogance. A commitment to gracious <span className="font-custom">faith</span> has a positive impact on: receiving and giving feedback; reviewing proposals; offering suggestions; responding helpfully and in a timely manner; growing others and serving diligently.</li>
+			<li><b>Gracious <span className="font-custom">Faith</span></b>&nbsp; - Our collective aknowledgement that&nbsp;we are all at different levels of our expertise and Fait, so there is&nbsp;no room for pride or arrogance. A commitment to gracious faith has a positive impact on: receiving and giving feedback; reviewing proposals; offering suggestions; responding helpfully and in a timely manner; growing others and serving diligently.</li>
 		</ol>
 
 			{close}
@@ -64,8 +65,8 @@ class Main extends React.Component {
 			<h2 className="major">Full Stack <span className="font-custom">Faith</span> Meetups</h2>
 			<p>The term "full stack" is used to describe the well rounded developer. Full Stack <span className="font-custom">faith</span> is a <strong>FREE</strong> monthly meetup where faith lessons + developer talk + pancakes = growth that is personal,  professional,  practical and delicious.</p>
 			<p>Full Stack <span className="font-custom">faith</span> is a community to <strong>GROW</strong> together, being well rounded in both our faith and professional development.</p>
-			<a href="https://www.facebook.com/events/725232831211604/" target="_blank" className="button float-right">Register for May 5 meetup</a>
-			<p>Join us for : </p>
+			<a href="https://www.facebook.com/events/725232831211604/" target="_blank" className="button right">RSVP Now</a>
+			<p>Join us <strong>May 5th</strong> for : </p>
 			<ol>
 				<li>developer tutorials</li>
 				<li>technology discussions</li>

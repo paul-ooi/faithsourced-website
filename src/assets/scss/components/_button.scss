@@ -45,6 +45,17 @@
 				margin-right: 0.5em;
 			}
 		}
+		
+		&.left {
+			float: left;
+			margin-bottom: 2em;
+		}
+
+		&.right {
+			float: right;
+			margin-top: -0.5em;
+			margin-bottom: 1em;
+		}
 
 		&.fit {
 			display: block;
