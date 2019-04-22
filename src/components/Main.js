@@ -165,7 +165,7 @@ class Main extends React.Component {
 
 				<article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<h2 className="major">Contact</h2>
-			<p>For all inquiries, including applicaiton requests and questions about how you or your church can participate in the Faith Sourced project, please provide the following : </p>
+			<p>For all inquiries, including application requests and questions about how you or your church can participate in the Faith Sourced project, please provide the following : </p>
 			<form name="contact" method="POST" action="/thanks/" data-netlify="true" onSubmit={this.handleSubmit}>
 				<input type="hidden" name="form-name" value="contact" />
 				<div className="field half first">
@@ -181,12 +181,12 @@ class Main extends React.Component {
 					<div className="select-wrapper">
 						<select name="type" id="type" onChange={this.handleChange}>
 							<option value="">Choose one&hellip;</option>
-						<option value="join">I would like to join Faith Sourced</option>
-						<option value="contribute">I would like to contribute to Faith Sourced</option>
-						<option value="fullstackfaith">I would like to have Full Stack Faith meetups in my area</option>
-						<option value="meeting">I would like schedule a meeting with a Faith Sourced representative</option>
-						<option value="more">I would like more informaiton about Faith Sourced</option>
-						<option value="other">Other</option>
+							<option value="join">I would like to join Faith Sourced</option>
+							<option value="contribute">I would like to contribute to Faith Sourced</option>
+							<option value="fullstackfaith">I would like to have Full Stack Faith meetups in my area</option>
+							<option value="meeting">I would like to schedule a meeting with a Faith Sourced representative</option>
+							<option value="more">I would like more informaiton about Faith Sourced</option>
+							<option value="other">Other</option>
 						</select>
 					</div>
 				</div>

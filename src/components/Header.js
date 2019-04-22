@@ -6,8 +6,8 @@ const Header = (props) => (
         <div className="logo" alt="Faith Sourced Logo"></div>
         <div className="content">
             <div className="inner">
-                <h1>Faith Sourced Software Foundation</h1>
-                <p>Software as a Service</p>
+                <h1 className="wordmark">Faith Sourced Software Foundation</h1>
+                <p className="tagline">Software as a Service</p>
             </div>
         </div>
         <nav>

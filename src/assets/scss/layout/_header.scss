@@ -80,7 +80,7 @@
 				}
 			}
 			
-			h1 {
+			h1.wordmark {
 					text-indent: -999999px;
 					width: 50vw;
 					min-width: 280px;
@@ -92,11 +92,15 @@
 
 			}
 
-			p {
+			p.tagline {
 				text-transform: uppercase;
 				letter-spacing: _font(letter-spacing);
 				font-size: 0.8rem;
 				line-height: 2;
+			}
+			
+			p {
+				font-size: 100%;
 			}
 		}
 
