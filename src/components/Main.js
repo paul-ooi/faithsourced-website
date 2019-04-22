@@ -29,14 +29,9 @@ class Main extends React.Component {
 				<p>Faith Sourced is a community of software developers using our skills for Jesus. We call it &ldquo;Software as a Service&rdquo; where Christ is the center of all we are and do.</p>
 				<span className="image main"><img src={logo_explained} alt="Faith Sourced logo explained" /></span>
 				<p>Our collective <span className="font-custom">faith</span> in Christ compells both our crowd-sourced and open-sourced contributions, hence the name Faith Sourced. This is software by the church, for the church.</p>
-			<p>But this isn&rsquo;t just for developers. Professionals from across the digital spectrum are essential to our community driven projects, including those in strategy, project management, design, development, infrastructure, support and communications. As such, the Faith Sourced project is also a platform for coordinating this collective expertise.</p>
-
+			<p>But this isn&rsquo;t just for developers. Professionals from across the digital spectrum are part of our community driven projects, including those in strategy, project management, design, development, infrastructure, support and communications. The Faith Sourced project is a platform for coordinating this collective expertise.</p>
 			<p>Each participant in the Faith Sourced project has seen what we can do as individuals, with all its limitations. We&rsquo;ve witnessed the duplication of effort at church after church, when we each try to accomplish the same goal, from our independent silos. The Faith Sourced project brings us together, with a common purpose, and a strength in numbers.</p>
-
 			<p>Faith Sourced is our contribution to the cause of Christ, and His church. Faith Sourced is our chance to use our uniquely technical skills for purposes that are eternal, united under one banner: the gospel of Jesus Christ. The software we build is freely available to the body of Christ, for His glory.</p>
-
-			<p>As a community, we gather to grow our faith and invest in each other professionally and spiritually. These meetups are designed to produce well roundedness, and are aptly named &ldquo;Full Stack Faith meetups&rdquo;.</p>
-
 			{close}
         </article>
 
@@ -55,7 +50,6 @@ class Main extends React.Component {
 			<li><b>Efficient <span className="font-custom">Faith</span></b> - the recognition that projects/tasks must be strategically well defined and clear in order to be conducive to individual contribution and large scale collaboration.</li>
 			<li><b>Gracious <span className="font-custom">Faith</span></b>&nbsp; - Our collective aknowledgement that&nbsp;we are all at different levels of our expertise and Fait, so there is&nbsp;no room for pride or arrogance. A commitment to gracious faith has a positive impact on: receiving and giving feedback; reviewing proposals; offering suggestions; responding helpfully and in a timely manner; growing others and serving diligently.</li>
 		</ol>
-
 			{close}
         </article>
 
@@ -65,7 +59,7 @@ class Main extends React.Component {
 			<h2 className="major">Full Stack <span className="font-custom">Faith</span> Meetups</h2>
 			<p>The term "full stack" is used to describe the well rounded developer. Full Stack <span className="font-custom">faith</span> is a <strong>FREE</strong> monthly meetup where faith lessons + developer talk + pancakes = growth that is personal,  professional,  practical and delicious.</p>
 			<p>Full Stack <span className="font-custom">faith</span> is a community to <strong>GROW</strong> together, being well rounded in both our faith and professional development.</p>
-			<a href="https://www.facebook.com/events/725232831211604/" target="_blank" className="button right">RSVP Now</a>
+			<a href="mailto:hello@faithsourced.com" target="_blank" className="button right">Want to Help?</a><a href="https://www.facebook.com/events/725232831211604/" target="_blank" className="button right">Want to Come?</a>
 			<p>Join us <strong>May 5th</strong> for : </p>
 			<ol>
 				<li>developer tutorials</li>
