@@ -106,13 +106,6 @@
 		}
 	}
 
-	select {
-		option {
-			background: _palette(bg);
-			color: _palette(fg);
-		}
-	}
-
 	.select-wrapper {
 		@include icon;
 		display: block;

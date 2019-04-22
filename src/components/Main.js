@@ -11,9 +11,8 @@ import icon_faithsites from '../images/icon-faithsites.png'
 import icon_founderchurch from '../images/icon-founderchurch.png'
 
 import banner_fullstackfaith from '../images/banner-fullstackfaith.jpg'
-import banner_mentorship from '../images/banner-mentorship.jpg'
-import banner_faithhacking from '../images/banner-faithhacking.jpg'
 import banner_resourced from '../images/banner-resourced.jpg'
+import banner_faithsites from '../images/banner-faithsites.jpg'
 import banner_founderchurch from '../images/banner-founderchurch.jpg'
 
 class Main extends React.Component {
@@ -59,7 +58,7 @@ class Main extends React.Component {
 			<h2 className="major">Full Stack <span className="font-custom">Faith</span> Meetups</h2>
 			<p>The term "full stack" is used to describe the well rounded developer. Full Stack <span className="font-custom">faith</span> is a <strong>FREE</strong> monthly meetup where faith lessons + developer talk + pancakes = growth that is personal,  professional,  practical and delicious.</p>
 			<p>Full Stack <span className="font-custom">faith</span> is a community to <strong>GROW</strong> together, being well rounded in both our faith and professional development.</p>
-			<a href="mailto:hello@faithsourced.com" target="_blank" className="button right">Want to Help?</a><a href="https://www.facebook.com/events/725232831211604/" target="_blank" className="button right">Want to Come?</a>
+			<a href="mailto:fullstack@faithsourced.com" target="_blank" className="button right">Want to Help?</a><a href="https://www.facebook.com/events/725232831211604/" target="_blank" className="button right">Want to Come?</a>
 			<p>Join us <strong>May 5th</strong> for : </p>
 			<ol>
 				<li>developer tutorials</li>
@@ -75,17 +74,29 @@ class Main extends React.Component {
         
         <article id="mentorship" className={`${this.props.article === 'mentorship' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_mentorship} alt="" /></div>
-			<span className="banner image"><img src={banner_mentorship} alt="" /></span>
-			<h2 className="major">Mentorship Program</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+			<h2 className="major">Iterative <span className="font-custom">Faith</span> Mentorship</h2>
+			<p>The iterative process is a practical approach to software development where the planning and implemention consists of many small iterations.</p>
+			<p>Iterative <span className="font-custom">Faith</span> Mentorship is a practical life and career development process of small changes, based on God's word and the guidance of professionals who have gone before. The iteration cycles provide both accountability, reflection and evaluation.</p>
+			<p>Typical mentorship programs cater to career or faith based objectives exclusively. We are convinced the two can not be understood in isolation.</p>
+			<p>Iterative <span className="font-custom">Faith</span> Mentorship connects carrer professionals with students and juniors pursuing a career in the digital space, with a distinct focus on relevant faith based conversations, including :</p>
+			<ol>
+				<li>work/life balance</li>
+				<li>faith/career integration</li>
+				<li>moral/ethical challenges</li>
+				<li>Christian/developer disciplines</li>
+			</ol>
+			<p>The formal application process will soon be made available here, but until then please send us a message at <a href="mailto:iterative@faithsourced.com" target="_blank">iterative@faithsourced.com</a> to apply for a mentor role or register as a mentee.</p>
+			<p><a href="mailto:iterative@faithsourced.com" target="_blank" className="button full">Join</a></p>
 			{close}
         </article>
         
         <article id="faithhacking" className={`${this.props.article === 'faithhacking' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_faithhacking} alt="" /></div>
-			<span className="banner image"><img src={banner_faithhacking} alt="" /></span>
 			<h2 className="major"><span className="font-custom">Faith</span> Hacking Days</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+			<p>Hackathons bring developers and domain experts together for a period of hyper-focused software sprints resulting in rapid progress and milestone achievement.</p>
+			<p><span className="font-custom">Faith</span> Hacking Days ensure that progress is not limited strictly to the codebase, but also to the personal growth and development of our faith. This means that code challenges are interspersed with devotional and life application challenges.</p>
+			<a href="https://www.facebook.com/faithsourced/" target="_blank" className="button right">Join us on Facebook</a>
+			<p>Join our Facebook page for announcements about our first <span className="font-custom">Faith</span> Hacking Day.</p>
 			{close}
         </article>
         
@@ -93,13 +104,22 @@ class Main extends React.Component {
 			<div className="logo"><img src={icon_resourced} alt="" /></div>
 			<span className="banner image"><img src={banner_resourced} alt="" /></span>
 			<h2 className="major">Re+Sourced Program</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+			<p>That place where <span className="font-custom">faith</span> and technology intersect is where many churches find themselves ill equipped and often misinformed. The Re+Sourced Program consists of seminars and downloadble resources for your church that tackle some of the most pressing issues for churches today, including : </p>
+			<ol>
+				<li>online security and the church</li>
+				<li>network security and the church</li>
+				<li>digital privacy and the church</li>
+				<li>social media and the church</li>
+				<li>SEO and the church</li>
+				<li>deplatforming and the church</li>
+				<li>&hellip;and more!</li>
+			</ol>
 			{close}
         </article>
         
         <article id="faithsites" className={`${this.props.article === 'faithsites' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_faithsites} alt="" /></div>
-			<span className="banner image"><img src={banner_fullstackfaith} alt="" /></span>
+			<span className="banner image"><img src={banner_faithsites} alt="" /></span>
 			<h2 className="major"><span className="font-custom">Faith</span> Sites Program</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 			{close}
@@ -115,7 +135,8 @@ class Main extends React.Component {
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<h2 className="major">Contact</h2>
-			<form method="post" action="#">
+			<p>For all inquiries, including applicaiton requests and questions about how you or your church can participate in the Faith Sourced project, please provide the following : </p>
+			<form method="POST" action="/thanks.html" data-netlify="true">
 			  <div className="field half first">
 			    <label htmlFor="name">Name</label>
 			    <input type="text" name="name" id="name" />
@@ -123,6 +144,20 @@ class Main extends React.Component {
 			  <div className="field half">
 			    <label htmlFor="email">Email</label>
 			    <input type="text" name="email" id="email" />
+			  </div>
+			  <div className="field">
+			    <label htmlFor="type">Inquiry Type</label>
+			    <div className="select-wrapper">
+			    	<select name="type" id="type" >
+				  		<option value="">Choose one&hellip;</option>
+						<option value="join">I would like to join Faith Sourced</option>
+						<option value="contribute">I would like to contribute to Faith Sourced</option>
+						<option value="fullstackfaith">I would like to have Full Stack Faith meetups in my area</option>
+						<option value="meeting">I would like schedule a meeting with a Faith Sourced representative</option>
+						<option value="more">I would like more informaiton about Faith Sourced</option>
+						<option value="other">Other</option>
+			    	</select>
+			    </div>
 			  </div>
 			  <div className="field">
 			    <label htmlFor="message">Message</label>

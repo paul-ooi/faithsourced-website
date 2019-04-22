@@ -22,8 +22,8 @@ const Home = (props) => (
 			<article>
 				<header className="major">
 					<span className="image"><img src={icon_mentorship} alt="" /></span>
-					<h3>Mentorship<br />Program</h3>
-					<p>A community <strong>TRAINING</strong> the next generation in both their <span className="font-custom">faith</span> and professional development.</p>
+					<h3>Iterative <span className="font-custom">Faith</span><br />Mentorship</h3>
+					<p>A mentorship program that <strong>GUIDES</strong> the next generation in both their <span className="font-custom">faith</span> and professional development.</p>
 				</header>
 				<a className="link primary" href="javascript:;" onClick={() => {props.onOpenArticle('mentorship')}}></a>
 			</article>
@@ -39,7 +39,7 @@ const Home = (props) => (
 				<header className="major">
 					<span className="image"><img src={icon_resourced} alt="" /></span>
 					<h3>Re+sourced<br />Program</h3>
-					<p>A community to <strong>EQUIP</strong> churches in their understanding and engagement in the digital realm.</p>
+					<p>A toolkit that <strong>EQUIPS</strong> the church in their understanding of and engagement in the digital realm.</p>
 				</header>
 				<a className="link primary" href="javascript:;" onClick={() => {props.onOpenArticle('resourced')}}></a>
 			</article>
