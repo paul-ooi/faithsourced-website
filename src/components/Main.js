@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { navigateTo } from "gatsby-link";
 
 import logo_explained from '../images/faithsourced-logo-explained.png'
 
@@ -15,15 +16,44 @@ import banner_resourced from '../images/banner-resourced.jpg'
 import banner_faithsites from '../images/banner-faithsites.jpg'
 import banner_founderchurch from '../images/banner-founderchurch.jpg'
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 class Main extends React.Component {
-  render() {
+	  constructor(props) {
+		super(props);
+		this.state = {};
+	  }
+	  
+	  handleChange = e => {
+		this.setState({ [e.target.name]: e.target.value });
+	  };
 
-    let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
+	  handleSubmit = e => {
+		e.preventDefault();
+		const form = e.target;
+		fetch("/", {
+		  method: "POST",
+		  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+		  body: encode({
+			"form-name": form.getAttribute("name"),
+			...this.state
+		  })
+		})
+		  .then(() => navigateTo(form.getAttribute("action")))
+		  .catch(error => alert(error));
+	  };
+	
+	render() {
+		let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
 
-    return (
-      <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
+		return (
+			<div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
 
-        <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+				<article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<h2 className="major">About Us</h2>
 				<p>Faith Sourced is a community of software developers using our skills for Jesus. We call it &ldquo;Software as a Service&rdquo; where Christ is the center of all we are and do.</p>
 				<span className="image main"><img src={logo_explained} alt="Faith Sourced logo explained" /></span>
@@ -32,9 +62,9 @@ class Main extends React.Component {
 			<p>Each participant in the Faith Sourced project has seen what we can do as individuals, with all its limitations. We&rsquo;ve witnessed the duplication of effort at church after church, when we each try to accomplish the same goal, from our independent silos. The Faith Sourced project brings us together, with a common purpose, and a strength in numbers.</p>
 			<p>Faith Sourced is our contribution to the cause of Christ, and His church. Faith Sourced is our chance to use our uniquely technical skills for purposes that are eternal, united under one banner: the gospel of Jesus Christ. The software we build is freely available to the body of Christ, for His glory.</p>
 			{close}
-        </article>
+				</article>
 
-        <article id="faith" className={`${this.props.article === 'faith' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+				<article id="faith" className={`${this.props.article === 'faith' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<h2 className="major">The Qualities of Our Faith</h2>
 			<p>The <span className="font-custom">faith</span> that fuels our contributions to Faith Sourced projects has the following qualities :</p>
 			<ol>
@@ -50,13 +80,13 @@ class Main extends React.Component {
 			<li><b>Gracious <span className="font-custom">Faith</span></b>&nbsp; - Our collective aknowledgement that&nbsp;we are all at different levels of our expertise and Fait, so there is&nbsp;no room for pride or arrogance. A commitment to gracious faith has a positive impact on: receiving and giving feedback; reviewing proposals; offering suggestions; responding helpfully and in a timely manner; growing others and serving diligently.</li>
 		</ol>
 			{close}
-        </article>
+				</article>
 
-        <article id="fullstackfaith" className={`${this.props.article === 'fullstackfaith' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+				<article id="fullstackfaith" className={`${this.props.article === 'fullstackfaith' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_fullstackfaith} alt="" /></div>
 			<span className="banner image"><img src={banner_fullstackfaith} alt="" /></span>
 			<h2 className="major">Full Stack <span className="font-custom">Faith</span> Meetups</h2>
-			<p>The term "full stack" is used to describe the well rounded developer. Full Stack <span className="font-custom">faith</span> is a <strong>FREE</strong> monthly meetup where faith lessons + developer talk + pancakes = growth that is personal,  professional,  practical and delicious.</p>
+			<p>The term "full stack" is used to describe the well rounded developer. Full Stack <span className="font-custom">faith</span> is a <strong>FREE</strong> monthly meetup where faith lessons + developer talk + pancakes = growth that is personal,	professional,	practical and delicious.</p>
 			<p>Full Stack <span className="font-custom">faith</span> is a community to <strong>GROW</strong> together, being well rounded in both our faith and professional development.</p>
 			<a href="mailto:fullstack@faithsourced.com" target="_blank" className="button right">Want to Help?</a><a href="https://www.facebook.com/events/725232831211604/" target="_blank" className="button right">Want to Come?</a>
 			<p>Join us <strong>May 5th</strong> for : </p>
@@ -70,9 +100,9 @@ class Main extends React.Component {
 			</ol>
 			<p>The Faith Sourced project is an initiative so ambitious we could worry there are not enough pancakes in the world. Thankfully our <span className="font-custom">faith</span> is not in pancakes.</p>
 			{close}
-        </article>
-        
-        <article id="mentorship" className={`${this.props.article === 'mentorship' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+				</article>
+				
+				<article id="mentorship" className={`${this.props.article === 'mentorship' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_mentorship} alt="" /></div>
 			<h2 className="major">Iterative <span className="font-custom">Faith</span> Mentorship</h2>
 			<p>The iterative process is a practical approach to software development where the planning and implemention consists of many small iterations.</p>
@@ -88,9 +118,9 @@ class Main extends React.Component {
 			<p>The formal application process will soon be made available here, but until then please send us a message at <a href="mailto:iterative@faithsourced.com" target="_blank">iterative@faithsourced.com</a> to apply for a mentor role or register as a mentee.</p>
 			<p><a href="mailto:iterative@faithsourced.com" target="_blank" className="button full">Join</a></p>
 			{close}
-        </article>
-        
-        <article id="faithhacking" className={`${this.props.article === 'faithhacking' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+				</article>
+				
+				<article id="faithhacking" className={`${this.props.article === 'faithhacking' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_faithhacking} alt="" /></div>
 			<h2 className="major"><span className="font-custom">Faith</span> Hacking Days</h2>
 			<p>Hackathons bring developers and domain experts together for a period of hyper-focused software sprints resulting in rapid progress and milestone achievement.</p>
@@ -98,9 +128,9 @@ class Main extends React.Component {
 			<a href="https://www.facebook.com/faithsourced/" target="_blank" className="button right">Join us on Facebook</a>
 			<p>Join our Facebook page for announcements about our first <span className="font-custom">Faith</span> Hacking Day.</p>
 			{close}
-        </article>
-        
-        <article id="resourced" className={`${this.props.article === 'resourced' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+				</article>
+				
+				<article id="resourced" className={`${this.props.article === 'resourced' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_resourced} alt="" /></div>
 			<span className="banner image"><img src={banner_resourced} alt="" /></span>
 			<h2 className="major">Re+Sourced Program</h2>
@@ -115,81 +145,81 @@ class Main extends React.Component {
 				<li>&hellip;and more!</li>
 			</ol>
 			{close}
-        </article>
-        
-        <article id="faithsites" className={`${this.props.article === 'faithsites' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+				</article>
+				
+				<article id="faithsites" className={`${this.props.article === 'faithsites' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_faithsites} alt="" /></div>
 			<span className="banner image"><img src={banner_faithsites} alt="" /></span>
 			<h2 className="major"><span className="font-custom">Faith</span> Sites Program</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 			{close}
-        </article>
-        
-        <article id="founderchurch" className={`${this.props.article === 'founderchurch' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+				</article>
+				
+				<article id="founderchurch" className={`${this.props.article === 'founderchurch' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_founderchurch} alt="" /></div>
 			<span className="banner image"><img src={banner_founderchurch} alt="" /></span>
 			<h2 className="major">Founder Church Program</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 			{close}
-        </article>
+				</article>
 
-        <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+				<article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<h2 className="major">Contact</h2>
 			<p>For all inquiries, including applicaiton requests and questions about how you or your church can participate in the Faith Sourced project, please provide the following : </p>
-			<form name="contact" method="POST" action="/thanks/" data-netlify="true">
-			  <div className="field half first">
-			    <label htmlFor="name">Name</label>
-			    <input type="text" name="name" id="name" />
-			  </div>
-			  <div className="field half">
-			    <label htmlFor="email">Email</label>
-			    <input type="text" name="email" id="email" />
-			  </div>
-			  <div className="field">
-			    <label htmlFor="type">Inquiry Type</label>
-			    <div className="select-wrapper">
-			    	<select name="type" id="type" >
-				  		<option value="">Choose one&hellip;</option>
+			<form name="contact" method="POST" action="/thanks/" data-netlify="true" onSubmit={this.handleSubmit}>
+				<input type="hidden" name="form-name" value="contact" />
+				<div className="field half first">
+					<label htmlFor="name">Name</label>
+					<input type="text" name="name" id="name" onChange={this.handleChange} />
+				</div>
+				<div className="field half">
+					<label htmlFor="email">Email</label>
+					<input type="text" name="email" id="email" onChange={this.handleChange} />
+				</div>
+				<div className="field">
+					<label htmlFor="type">Inquiry Type</label>
+					<div className="select-wrapper">
+						<select name="type" id="type" onChange={this.handleChange}>
+							<option value="">Choose one&hellip;</option>
 						<option value="join">I would like to join Faith Sourced</option>
 						<option value="contribute">I would like to contribute to Faith Sourced</option>
 						<option value="fullstackfaith">I would like to have Full Stack Faith meetups in my area</option>
 						<option value="meeting">I would like schedule a meeting with a Faith Sourced representative</option>
 						<option value="more">I would like more informaiton about Faith Sourced</option>
 						<option value="other">Other</option>
-			    	</select>
-			    </div>
-			  </div>
-			  <div className="field">
-			    <label htmlFor="message">Message</label>
-			    <textarea name="message" id="message" rows="4"></textarea>
-			  </div>
-			  <ul className="actions">
-			    <li><input type="reset" value="Cancel" onClick={() => {this.props.onCloseArticle()}} /></li>
-			    <li><input type="submit" value="Send Message" className="special" /></li>
-			  </ul>
+						</select>
+					</div>
+				</div>
+				<div className="field">
+					<label htmlFor="message">Message</label>
+					<textarea name="message" id="message" rows="4" onChange={this.handleChange} />
+				</div>
+				<ul className="actions">
+					<li><input type="reset" value="Cancel" onClick={() => {this.props.onCloseArticle()}} /></li>
+					<li><input type="submit" value="Send Message" className="special" /></li>
+				</ul>
 			</form>
 			<ul className="icons">
-			  <li><a href="https://twitter.com/faithsourced" target="_blank" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-			  <li><a href="https://facebook.com/faithsourced" target="_blank" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
+				<li><a href="https://twitter.com/faithsourced" target="_blank" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
+				<li><a href="https://facebook.com/faithsourced" target="_blank" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
 			<li><a href="https://youtube.com/faithsourced" target="_blank" className="icon fa-youtube"><span className="label">YouTube</span></a></li>
-			  <li><a href="https://instagram.com/faithsourced" target="_blank" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-			  <li><a href="https://github.com/faithsourced" target="_blank" className="icon fa-github"><span className="label">GitHub</span></a></li>
+				<li><a href="https://instagram.com/faithsourced" target="_blank" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
+				<li><a href="https://github.com/faithsourced" target="_blank" className="icon fa-github"><span className="label">GitHub</span></a></li>
 			</ul>
 			{close}
-        </article>
-
-      </div>
-    )
-  }
+				</article>
+			</div>
+		)
+	}
 }
 
 Main.propTypes = {
-  route: PropTypes.object,
-  article: PropTypes.string,
-  articleTimeout: PropTypes.bool,
-  onCloseArticle: PropTypes.func,
-  timeout: PropTypes.bool,
-  setWrapperRef: PropTypes.func.isRequired,
+	route: PropTypes.object,
+	article: PropTypes.string,
+	articleTimeout: PropTypes.bool,
+	onCloseArticle: PropTypes.func,
+	timeout: PropTypes.bool,
+	setWrapperRef: PropTypes.func.isRequired,
 }
 
 export default Main
