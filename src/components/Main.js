@@ -136,7 +136,7 @@ class Main extends React.Component {
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<h2 className="major">Contact</h2>
 			<p>For all inquiries, including applicaiton requests and questions about how you or your church can participate in the Faith Sourced project, please provide the following : </p>
-			<form method="POST" action="/thanks.html" data-netlify="true">
+			<form name="contact" method="POST" action="/thanks/" data-netlify="true">
 			  <div className="field half first">
 			    <label htmlFor="name">Name</label>
 			    <input type="text" name="name" id="name" />
