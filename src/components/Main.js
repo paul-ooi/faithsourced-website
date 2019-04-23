@@ -352,8 +352,8 @@ class Main extends React.Component {
 			<hr />
 			<h3>Nominate Your Church</h3>
 			<p>For more information about becoming a Founder Church, please proivde the following&nbsp;:</p>
-			<form name="founderchurch-nomiation" method="POST" action="/thanks/" data-netlify="true" onSubmit={this.handleSubmit}>
-				<input type="hidden" name="form-name" value="founderchurch-nomiation" />
+			<form name="founderchurch-nomination" method="POST" action="/thanks/" data-netlify="true" onSubmit={this.handleSubmit}>
+				<input type="hidden" name="form-name" value="founderchurch-nomination" />
 				<div className="field half first">
 					<label htmlFor="name">Your Name</label>
 					<input type="text" name="name" id="name" onChange={this.handleChange} />
