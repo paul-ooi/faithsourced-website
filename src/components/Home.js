@@ -39,7 +39,7 @@ const Home = (props) => (
 				<header className="major">
 					<span className="image"><img src={icon_resourced} alt="" /></span>
 					<h3>Re+sourced<br />Program</h3>
-					<p>A toolkit that <strong>EQUIPS</strong> the church in their understanding of and engagement in the digital realm.</p>
+					<p>A toolkit to <strong>EQUIP</strong> churches in their understanding of and engagement in the digital realm.</p>
 				</header>
 				<a className="link primary" href="javascript:;" onClick={() => {props.onOpenArticle('resourced')}}></a>
 			</article>
@@ -47,7 +47,7 @@ const Home = (props) => (
 				<header className="major">
 					<span className="image"><img src={icon_faithsites} alt="" /></span>
 					<h3><span className="font-custom">Faith</span> Sites<br />Program</h3>
-					<p>Scripture driven software for a <strong>NEW</strong> way of thinking about church websites.</p>
+					<p>Scripture driven software for a <strong>NEW</strong> way to think about church websites.</p>
 				</header>
 				<a className="link primary" href="javascript:;" onClick={() => {props.onOpenArticle('faithsites')}}></a>
 			</article>
