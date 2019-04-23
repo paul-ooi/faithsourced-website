@@ -77,7 +77,7 @@ class Main extends React.Component {
 			<li><b>Collaborative <span className="font-custom">Faith</span></b> - the pursuit of a distributed effort that depends on manageable contributions from the many instead of unsustainable contributions from the few.</li>
 			<li><b>Generous <span className="font-custom">Faith</span></b> - a heart to share the fruits of our labour so that as many churches as possible can benefit. This includes shared expertise, shared best practices, shared code, shard bug fixes, shared support resources. There is no room for the &ldquo;keep this to ourselves&rdquo; practice that occurs when churches are independent silos on these matters.</li>
 			<li><b>Efficient <span className="font-custom">Faith</span></b> - the recognition that projects/tasks must be strategically well defined and clear in order to be conducive to individual contribution and large scale collaboration.</li>
-			<li><b>Gracious <span className="font-custom">Faith</span></b>&nbsp; - Our collective aknowledgement that&nbsp;we are all at different levels of our expertise and Fait, so there is&nbsp;no room for pride or arrogance. A commitment to gracious faith has a positive impact on: receiving and giving feedback; reviewing proposals; offering suggestions; responding helpfully and in a timely manner; growing others and serving diligently.</li>
+			<li><b>Gracious <span className="font-custom">Faith</span></b>&nbsp; - Our collective aknowledgement that&nbsp;we are all at different levels of our expertise and Faith, so there is&nbsp;no room for pride or arrogance. A commitment to gracious faith has a positive impact on: receiving and giving feedback; reviewing proposals; offering suggestions; responding helpfully and in a timely manner; growing others and serving diligently.</li>
 		</ol>
 			{close}
 				</article>
@@ -416,7 +416,7 @@ class Main extends React.Component {
 							<option value="contribute">I would like to contribute to Faith Sourced</option>
 							<option value="fullstackfaith">I would like to have Full Stack Faith meetups in my area</option>
 							<option value="meeting">I would like to schedule a meeting with a Faith Sourced representative</option>
-							<option value="more">I would like more informaiton about Faith Sourced</option>
+							<option value="more">I would like more information about Faith Sourced</option>
 							<option value="other">other</option>
 						</select>
 					</div>
