@@ -190,7 +190,7 @@ class Main extends React.Component {
 			<div className="logo"><img src={icon_resourced} alt="" /></div>
 			<span className="banner image"><img src={banner_resourced} alt="" /></span>
 			<h2 className="major">Re+Sourced Program</h2>
-			<p>That place where <span className="font-custom">faith</span> and technology intersect is where many churches find themselves ill equipped and often misinformed. The Re+Sourced Program consists of seminars and downloadable resources for your church that tackle some of the most pressing issues for churches today, including&nbsp;:</p>
+			<p>That place where <span className="font-custom">faith</span> and technology intersect is where many churches find themselves ill equipped and often misinformed. The Re+Sourced Program consists of seminars and downloadable resources for your church that tackle some of the most pressing issues facing churches today, including&nbsp;:</p>
 			<ol>
 				<li>online security and the church</li>
 				<li>network security and the church</li>
