@@ -12,6 +12,7 @@ import icon_faithsites from '../images/icon-faithsites.png'
 import icon_founderchurch from '../images/icon-founderchurch.png'
 
 import banner_fullstackfaith from '../images/banner-fullstackfaith.jpg'
+import banner_iterativefaith from '../images/banner-iterativefaith.jpg'
 import banner_faithhacking from '../images/banner-faithhacking.jpg'
 import banner_resourced from '../images/banner-resourced.jpg'
 import banner_faithsites from '../images/banner-faithsites.jpg'
@@ -105,6 +106,7 @@ class Main extends React.Component {
 				
 				<article id="mentorship" className={`${this.props.article === 'mentorship' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_mentorship} alt="" /></div>
+			<span className="banner image"><img src={banner_iterativefaith} alt="" /></span>
 			<h2 className="major">Iterative <span className="font-custom">Faith</span> Mentorship</h2>
 			<p>Iterative development is a practical approach to software authoring where the planning and implementation consists of many small iterations.</p>
 			<p>Iterative <span className="font-custom">Faith</span> Mentorship is a practical life and career development process of small changes, based on God's word and the guidance of experienced professionals. Each iteration cycle includes accountability, reflection, evaluation and decisive action.</p>
