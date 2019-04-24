@@ -12,6 +12,7 @@ import icon_faithsites from '../images/icon-faithsites.png'
 import icon_founderchurch from '../images/icon-founderchurch.png'
 
 import banner_fullstackfaith from '../images/banner-fullstackfaith.jpg'
+import banner_faithhacking from '../images/banner-faithhacking.jpg'
 import banner_resourced from '../images/banner-resourced.jpg'
 import banner_faithsites from '../images/banner-faithsites.jpg'
 import banner_founderchurch from '../images/banner-founderchurch.jpg'
@@ -178,6 +179,7 @@ class Main extends React.Component {
 				
 				<article id="faithhacking" className={`${this.props.article === 'faithhacking' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
 			<div className="logo"><img src={icon_faithhacking} alt="" /></div>
+			<span className="banner image"><img src={banner_faithhacking} alt="" /></span>
 			<h2 className="major"><span className="font-custom">Faith</span> Hacking Days</h2>
 			<p>Hackathons bring developers and domain experts together for a period of hyper-focused software sprints resulting in rapid progress and milestone achievement.</p>
 			<p><span className="font-custom">Faith</span> Hacking Days ensure that progress is not limited strictly to the codebase, but also to the personal growth and development of our faith. This means that code challenges are interspersed with devotional and life application challenges.</p>
