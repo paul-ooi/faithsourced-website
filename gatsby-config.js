@@ -9,12 +9,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
+        name: 'Faith Sourced Software Foundation',
         short_name: 'Faith Sourced',
         start_url: '/',
         background_color: '#2c393f',
         theme_color: '#2c393f',
-        display: 'minimal-ui',
+        display: 'standalone',
         icon: 'src/images/favicon-512x512.png', // This path is relative to the root of the site.
       },
     },
