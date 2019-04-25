@@ -67,7 +67,7 @@ class Main extends React.Component {
 				</article>
 
 				<article id="faith" className={`${this.props.article === 'faith' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-			<h2 className="major">The Qualities of Our Faith</h2>
+			<h2 className="major">The Qualities of Our <span className="font-custom">Faith</span></h2>
 			<p>The <span className="font-custom">faith</span> that fuels our contributions to Faith Sourced project has the following qualities :</p>
 			<ol>
 			<li><b>Gospel <span className="font-custom">Faith</span></b> - an unshakable conviction that Christ is the centre of all we are and all we do. His death on the cross is where we exchange our sins for his perfection. His resurrection from the grave certifies his perfection and validates that our sins have been paid for in their entirety. He is glorified as we build software to share this good news with the world.</li>
