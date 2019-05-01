@@ -33,7 +33,6 @@
 			height: 40vh;
 			max-height: 40em;
 			min-height: 23em;
-			overflow: hidden;
 			position: relative;
 			width: 33.333%;
 			
@@ -147,6 +146,154 @@
 			&:nth-child(6n) {
 				&:before {
 					background-color: _palette(tile-bg-6);
+				}
+			}
+			
+			.ribbon {
+				width: 150px;
+				height: 150px;
+				overflow: hidden;
+				position: absolute;
+				z-index: 100;
+							  
+				&:before,
+				&:after {
+					position: absolute;
+					z-index: -1;
+					content: '';
+					display: block;
+					border: 5px solid _palette(tile-ribbon-backside);
+				}
+				
+				div {
+					position: absolute;
+					display: block;
+					width: 225px;
+					height: 48px;
+					background-color: _palette(tile-ribbon);
+					box-shadow: 0 5px 10px rgba(0,0,0,.1);
+					text-align: center;
+					line-height: 45px;
+					
+					span {
+						display: inline-block;
+						color: _palette(tile-ribbon-text);
+						line-height: 1;
+						text-transform: uppercase;
+						vertical-align: middle;
+						
+						a {
+							border: none;
+						}
+						
+						strong {
+							font-weight: 600;
+							color: _palette(tile-ribbon-text);
+						}
+						
+						i {
+						
+						}
+					}
+				}
+				
+				&.ribbon-top-left {
+				  top: -10px;
+				  left: -10px;
+				  
+					&:before,
+					&:after {
+					  border-top-color: transparent;
+					  border-left-color: transparent;
+					}
+					&:before {
+					  top: 0;
+					  right: 0;
+					}
+					&:after {
+					  bottom: 0;
+					  left: 0;
+					}
+					div {
+					  right: -25px;
+					  top: 30px;
+					  transform: rotate(-45deg);
+					}
+				}
+				
+				&.ribbon-top-right {
+					top: -10px;
+					right: -10px;
+					
+					&:before,
+					&:after {
+						border-top-color: transparent;
+						border-right-color: transparent;
+					}
+					&:before {
+						top: 0;
+						left: 0;
+					}
+					&:after {
+						bottom: 0;
+						right: 0;
+					}
+					div {
+						left: -25px;
+						top: 30px;
+						transform: rotate(45deg);
+					}
+				}
+				
+				&.ribbon-bottom-left {
+					bottom: -10px;
+					left: -10px;
+				
+					&:before,
+					&:after {
+						border-bottom-color: transparent;
+						border-left-color: transparent;
+					}
+					
+					&:before {
+						bottom: 0;
+						right: 0;
+					}
+					
+					&:after {
+						top: 0;
+						left: 0;
+					}
+					
+					div {
+						right: -25px;
+						bottom: 30px;
+						transform: rotate(225deg);
+					}
+				}
+				
+				&.ribbon-bottom-right {
+					bottom: -10px;
+					right: -10px;
+					
+					&:before,
+					&:after {
+						border-bottom-color: transparent;
+						border-right-color: transparent;
+					}
+					&:before {
+						bottom: 0;
+						left: 0;
+					}
+					&:after {
+						top: 0;
+						right: 0;
+					}
+					div {
+						left: -25px;
+						bottom: 30px;
+						transform: rotate(-225deg);
+					}
 				}
 			}
 		}
