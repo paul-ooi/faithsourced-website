@@ -38,6 +38,7 @@
 			
 			.image {
 				text-align: center;
+				width: 100%; /** required for ie11 fix **/
 			}
 			
 			.image img {
@@ -49,6 +50,7 @@
 				position: relative;
 				z-index: 3;
 				text-align: center;
+				width: 100%; /** required for ie11 fix **/
 			}
 
 			h3 {
