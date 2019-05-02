@@ -2,7 +2,10 @@ module.exports = {
   siteMetadata: {
     title: "Faith Sourced Software Foundation",
     author: "",
-    description: "Sofware as a Service"
+    description: "Faith Sourced is a community of software developers using their skills for Jesus. We call it Software as a Service where Christ is the center of all we are and do. Faith Sourced is our contribution to the cause of Christ, and His church. Faith Sourced is our chance to use our uniquely technical skills for purposes that are eternal, united under one banner: the gospel of Jesus Christ. The software we build is freely available to the body of Christ, for His glory.",
+     keywords: "software,developer,code,open source,faith,christian,jesus,church,meetups,toronto,canada",
+     thumbnail: "/src/images/favicon-512x512.png",
+     url: "https://faithsourced.com"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
