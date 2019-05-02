@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-class ThanksPage extends React.Component {
+class SecondPage extends React.Component {
   constructor(props) {
     super(props)
   }
