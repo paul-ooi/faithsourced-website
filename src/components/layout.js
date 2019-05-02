@@ -28,7 +28,7 @@ const Layout = ({ children, location }) => {
   return (
     <StaticQuery
       query={graphql`
-        query SiteTitleQuery {
+        query SiteMetaDataQuery {
           site {
             siteMetadata {
               title
@@ -47,11 +47,11 @@ const Layout = ({ children, location }) => {
             meta={[
               { name: 'description', content: data.site.siteMetadata.description },
               { name: 'keywords', content: data.site.siteMetadata.keywords },
-              { name: 'og:url', content: data.site.siteMetadata.url },
-              { name: 'og:type', content: 'website' },
-              { name: 'og:title', content: data.site.siteMetadata.title },
-              { name: 'og:image', content: data.site.siteMetadata.thumbnail },
-              { name: 'og:description', content: data.site.siteMetadata.description },
+              { property: 'og:url', content: data.site.siteMetadata.url + location.pathname},
+              { property: 'og:type', content: 'website' },
+              { property: 'og:title', content: data.site.siteMetadata.title },
+              { property: 'og:image', content: data.site.siteMetadata.thumbnail },
+              { property: 'og:description', content: data.site.siteMetadata.description },
             ]}
           >
             <html lang="en" />
