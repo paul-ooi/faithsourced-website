@@ -7,20 +7,16 @@ To run a local copy of our site, for your own hacking pleasure, you’ll need so
 ## Installation
 
 ### Install NPM
-```sudo npm install -g n
-```
+```sudo npm install -g n```
 
 ### Install Node
-```sudo n stable
-```
+```sudo n stable```
 
 ### Instal Gatsby
-```sudo npm install -g gatsby-cli
-```
+```sudo npm install -g gatsby-cli```
 
 ### Instal Netlify Dev
-```sudo npm install netlify-cli -g
-```
+```sudo npm install netlify-cli -g```
 
 ### Clone GITHub Repository
 via HTTPS
