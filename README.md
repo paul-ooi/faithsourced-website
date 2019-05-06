@@ -26,7 +26,7 @@ sudo npm install -g gatsby-cli
 sudo npm install netlify-cli -g
 ```
 
-### Clone GITHub Repository
+### Clone GitHub Repository
 ```
 via HTTPS
 https://github.com/faithsourced/faithsourced-website.git
