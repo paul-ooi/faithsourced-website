@@ -37,6 +37,6 @@ git@github.com:faithsourced/faithsourced-website.git
 
 ### Start Netlify Dev Live
 ```
-cd /path-to-cloned-git-repo/gatsby-faithsourced
+cd /path-to-cloned-git-repo/faithsourced-website
 netlify dev --live
 ```
