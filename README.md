@@ -6,24 +6,24 @@ To run a local copy of our site, for your own hacking pleasure, you’ll need so
 
 ## Installation
 
-###Install NPM
-sudo npm install -g n
+### Install NPM
+```sudo npm install -g n```
 
-###Install Node
-sudo n stable
+### Install Node
+```sudo n stable```
 
-###Instal Gatsby
-sudo npm install -g gatsby-cli
+### Instal Gatsby
+```sudo npm install -g gatsby-cli```
 
-###Instal Netlify Dev
-sudo npm install netlify-cli -g
+### Instal Netlify Dev
+```sudo npm install netlify-cli -g```
 
-###Clone GITHub Repository
+### Clone GITHub Repository
 via HTTPS
-https://github.com/faithsourced/faithsourced-website.git
+`https://github.com/faithsourced/faithsourced-website.git`
 or via SSH
-git@github.com:faithsourced/faithsourced-website.git
+`git@github.com:faithsourced/faithsourced-website.git`
 
-###Start Netlify Dev Live
-cd /path-to-cloned-git-repo/gatsby-faithsourced
-netlify dev --live
+### Start Netlify Dev Live
+```cd /path-to-cloned-git-repo/gatsby-faithsourced
+netlify dev --live```
