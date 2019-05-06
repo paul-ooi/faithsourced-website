@@ -26,4 +26,5 @@ or via SSH
 
 ### Start Netlify Dev Live
 ```cd /path-to-cloned-git-repo/gatsby-faithsourced
-netlify dev --live```
+netlify dev --live
+```
