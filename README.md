@@ -30,6 +30,7 @@ sudo npm install netlify-cli -g
 ```
 via HTTPS
 https://github.com/faithsourced/faithsourced-website.git
+
 or via SSH
 git@github.com:faithsourced/faithsourced-website.git
 ```
