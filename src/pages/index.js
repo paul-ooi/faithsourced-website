@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 
 import Header from '../components/Header'
@@ -92,11 +93,12 @@ class IndexPage extends React.Component {
       }
     }
   }
-
+  
   render() {
+  	const postList = this.props.data.allMarkdownRemark;
     return (
       <Layout location={this.props.location}>
-        <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'is-article-visible' : ''}`}>
+        <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'blurred' : ''}`}>
           <div id="wrapper">
             <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
             <Main
@@ -107,7 +109,22 @@ class IndexPage extends React.Component {
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
             />
-            <Home onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
+            <div id="home" style={this.state.timeout ? {display: 'none'} : {}}>
+            	<Home onOpenArticle={this.handleOpenArticle} />
+            	{/**
+            	<section id="blog-posts">
+            	 {postList.edges.map(({ node }, i) => (
+					<Link to={node.fields.slug} key={i} className="link" >
+					  <div className="post-list">
+						<h1>{node.frontmatter.title}</h1>
+						<span>{node.frontmatter.date}</span>
+						<p>{node.excerpt}</p>
+					  </div>
+					</Link>
+				  ))}
+            	</section>
+            	**/}
+            </div>
             <Footer timeout={this.state.timeout} />
           </div>
           <div id="bg"></div>
@@ -118,3 +135,22 @@ class IndexPage extends React.Component {
 }
 
 export default IndexPage
+
+export const listQuery = graphql`
+  query ListQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          fields{
+            slug
+          }
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM Do YYYY")
+            title
+          }
+        }
+      }
+    }
+  }
+`
