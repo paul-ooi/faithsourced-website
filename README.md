@@ -6,7 +6,7 @@ To run a local copy of our site, for your own hacking pleasure, you’ll need so
 
 ## Requirements
 
-* [Node](https://nodejs.org/en/) (Recommended version: LTS)
+* [Node](https://nodejs.org/en/download/) (Recommended version: LTS)
   * It installs `npm` with it
   * If you want to use different versions of Node you can use [nvm](https://github.com/nvm-sh/nvm) to switch between them
 * [Git](https://git-scm.com/)
