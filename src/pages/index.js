@@ -2,6 +2,8 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 
+import scrollToComponent from 'react-scroll-to-component';
+
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Home from '../components/Home'
@@ -18,10 +20,11 @@ class IndexPage extends React.Component {
       loading: 'is-loading',
       scrolly: 0
     }
-    this.handleOpenArticle = this.handleOpenArticle.bind(this)
-    this.handleCloseArticle = this.handleCloseArticle.bind(this)
+    this.handleOpenArticle = this.handleOpenArticle.bind(this);
+    this.handleCloseArticle = this.handleCloseArticle.bind(this);
     this.setWrapperRef = this.setWrapperRef.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.handleScrollTo = this.handleScrollTo.bind(this);
   }
 
   componentDidMount () {
@@ -94,13 +97,18 @@ class IndexPage extends React.Component {
     }
   }
   
+  handleScrollTo() {
+    scrollToComponent(this.Blog, { offset: 0, align: 'top', duration: 300});
+  }
+  
   render() {
-  	const postList = this.props.data.allMarkdownRemark;
+  	//const postList = this.props.data.allMarkdownRemark;
+  	const postListJSON = this.props.data.allThirdPartyPosts;
     return (
       <Layout location={this.props.location}>
         <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'blurred' : ''}`}>
           <div id="wrapper">
-            <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
+            <Header onOpenArticle={this.handleOpenArticle} onScrollTo={this.handleScrollTo} timeout={this.state.timeout} />
             <Main
               isArticleVisible={this.state.isArticleVisible}
               timeout={this.state.timeout}
@@ -112,7 +120,7 @@ class IndexPage extends React.Component {
             <div id="home" style={this.state.timeout ? {display: 'none'} : {}}>
             	<Home onOpenArticle={this.handleOpenArticle} />
             	{/**
-            	<section id="blog-posts">
+            	<section id="blog">
             	 {postList.edges.map(({ node }, i) => (
 					<Link to={node.fields.slug} key={i} className="link" >
 					  <div className="post-list">
@@ -124,6 +132,20 @@ class IndexPage extends React.Component {
 				  ))}
             	</section>
             	**/}
+            	<section id="blog" className="tiles" ref={(section) => { this.Blog = section; }}>
+					{postListJSON.edges.map(({ node }, i) => (
+						<article className="image-tile" key={i} style={{backgroundImage: `url(${node.image_1_local.childImageSharp.fluid.src})`}}>
+							<div className="ribbon ribbon-top-right"><div><span><strong>Blog Post</strong></span></div></div>
+							<header className="major">
+								<h3>{node.title}</h3>
+								<span className="date-line"><i className="fa fa-calendar"></i>{node.date}</span>
+								<p>{node.excerpt}</p>
+							 </header>
+							<Link to={`${node.slug}`} key={i} className="link primary"></Link>
+						 </article>
+					))}
+            	</section>
+            	
             </div>
             <Footer timeout={this.state.timeout} />
           </div>
@@ -141,14 +163,33 @@ export const listQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          fields{
+          fields {
             slug
           }
           excerpt(pruneLength: 250)
           frontmatter {
-            date(formatString: "MMMM Do YYYY")
+            date(formatString: "MMMM D, YYYY [at] h:mm A")
             title
           }
+        }
+      }
+    }
+    allThirdPartyPosts(sort: { order: DESC, fields: [date] }) {
+      edges {
+        node {
+			title
+			image_1_url
+			image_1_local {
+				childImageSharp {
+					fluid(maxWidth: 512, maxHeight: 512) {
+						src
+					}
+				}
+				publicURL
+			}
+			date(formatString: "MMMM D, YYYY [at] h:mm A")
+			slug
+			excerpt
         }
       }
     }
