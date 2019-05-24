@@ -21,12 +21,12 @@ function BlogPost(props) {
 export default BlogPost;
 
 export const query = graphql`
-
 query PostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
         html
         excerpt
         frontmatter {
+            date(formatString: "MMMM D, YYYY [at] h:mm A")
             title
         }
     }
