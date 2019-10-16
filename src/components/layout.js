@@ -54,10 +54,17 @@ const Layout = ({ children, location, meta_title }) => {
 				email_address
 				meta_keywords
 				meta_description
-				logo_wordmark_img
-				logo_glyph_img
+				logo_favicon_img_local {
+					childImageSharp {
+						fixed(width: 512, height: 512) {
+							src
+						}
+					}
+					publicURL
+				}
 				logo_slogan
 				site_bg_img
+				site_url
 			  }
 			}
 		  }
@@ -70,10 +77,10 @@ const Layout = ({ children, location, meta_title }) => {
 				meta={[
 					{ name: 'description', content: data.allThirdPartyPreferences.edges[0].node.meta_description },
 					{ name: 'keywords', content: data.allThirdPartyPreferences.edges[0].node.meta_keywords },
-					{ property: 'og:url', content: location.hostname + location.pathname},
+					{ property: 'og:url', content: data.allThirdPartyPreferences.edges[0].node.site_url + location.pathname},
 					{ property: 'og:type', content: 'website' },
 					{ property: 'og:title', content: !meta_title ? (data.allThirdPartyPreferences.edges[0].node.site_title):(data.allThirdPartyPreferences.edges[0].node.site_title + ' | ' + meta_title) },
-					{ property: 'og:image', content: '' },
+					{ property: 'og:image', content: data.allThirdPartyPreferences.edges[0].node.site_url + data.allThirdPartyPreferences.edges[0].node.logo_favicon_img_local.publicURL },
 					{ property: 'og:description', content: data.allThirdPartyPreferences.edges[0].node.meta_description },
 				]}
 			  >
