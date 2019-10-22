@@ -17,7 +17,7 @@ module.exports = {
 				background_color: `${process.env.GATSBY_PLUGIN_MANIFEST_BGCOLOR}`,
 				theme_color: `${process.env.GATSBY_PLUGIN_MANIFEST_THEMECOLOR}`,
 				display: 'standalone',
-				icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+				icon: 'src/images/dynamic/favicon.png', // This path is relative to the root of the site.
 			},
 		},
 		'gatsby-plugin-offline', // always list after `gatsby-plugin-manifest`
@@ -109,6 +109,13 @@ module.exports = {
 				nodeType: 'thirdParty__Pages',
 				imagePath: 'tile_icon_url',
 				name: 'tile_icon_local',
+			},
+		},
+		{
+		resolve: 'gatsby-plugin-remote-images', options: {
+				nodeType: 'thirdParty__Pages',
+				imagePath: 'tile_thumbnail_url',
+				name: 'tile_thumbnail_local',
 			},
 		},
 		{

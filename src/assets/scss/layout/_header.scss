@@ -15,6 +15,7 @@
 			'filter #{_duration(article)} ease-in-out',
 			'opacity #{_duration(article)} ease-in-out',
 		));
+			
 		background-image: -moz-radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
 		background-image: -webkit-radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
 		background-image: -ms-radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
@@ -38,6 +39,14 @@
 				background: _palette(border);
 			}
 		}
+		
+		.body.loaded & {
+			@include vendor('transition', (
+				'transform #{_duration(article)} ease-in-out',
+				'filter #{_duration(article)} ease-in-out',
+				'opacity #{_duration(article)} ease-in-out',
+			));
+		}
 
 		> :first-child {
 			margin-top: 0;
@@ -53,27 +62,34 @@
 			line-height: 5.5rem;
 			border: solid _size(border-width) _palette(border);
 			border-radius: 100%;
-			background-image: url(map-get($theme, "logo_glyph_img"));
+			background-image:		url('../../images/dynamic/logo_glyph.#{map-get($theme, "logo_glyph_img_type")}');
 			background-size: contain;
 			
 			& + .content {
+				border-style: solid;
+				border-color: _palette(border);
 				border-top-width: _size(border-width);
+				border-bottom-width: _size(border-width);
 			}
 		}
 		
-		.content {
-			border-style: solid;
-			border-color: _palette(border);
-			border-bottom-width: _size(border-width);
+		.content {			
 			max-width: 100%;
 
 			.inner {
 				@include vendor('transition', (
-					'max-height #{_duration(intro)} ease',
-					'padding #{_duration(intro)} ease',
 					'opacity #{_duration(article)} ease-in-out'
 				));
 				@include vendor('transition-delay', '0.25s');
+					
+				.body.loaded & {
+					@include vendor('transition', (
+						'max-height #{_duration(intro)} ease',
+						'padding #{_duration(intro)} ease',
+						'opacity #{_duration(article)} ease-in-out'
+					));
+					@include vendor('transition-delay', '0.25s');
+				}
 				padding: 3rem 2rem;
 				max-height: 40rem;
 				overflow: hidden;
@@ -94,7 +110,7 @@
 					min-width: 280px;
 					height: 20vh;
 					min-height: 200px;
-					background-image: url(map-get($theme, "logo_wordmark_img"));
+					background-image:		url('../../images/dynamic/logo_wordmark.#{map-get($theme, "logo_wordmark_img_type")}');
 					background-repeat: no-repeat;
 					background-position: center;
 
@@ -120,7 +136,8 @@
 				padding-left: 0;
 				border: solid _size(border-width) _palette(border);
 				border-radius: _size(button-radius);
-
+				overflow: hidden;
+				
 				li {
 					padding-left: 0;
 					border-left: solid _size(border-width) _palette(border);
